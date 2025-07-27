@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include <iostream>
+#include <vector>
+#include <list>
+#include <map>
+#include <set>
+#include <queue>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+//For Debugging
+#define debug(a...)          {cout<<" #--> ";dbg,a; cout<<endl;}
+struct debugger
+{
+    template<typename T> debugger& operator , (const T v)
+    {
+        cout<<v<<" ";
+        return *this;
+    }
+} dbg;
+
+
+#define deb(a)     cout<<__LINE__<<"# "<<#a<<" -> "<<a<<endl;
+typedef long long LL;
+const double PI = acos(-1);
+const double EPS = 1e-7; ///1*10^-7
+const int oo = 1e8+0.5;
+
+int main()
+{
+//    freopen("in.txt", "r", stdin);  ///To read from a file.
+//    freopen("out.txt", "w", stdout);  ///To write  a file.
+    /// multimap contain duplikate keys
+    multimap<string,int>mm;
+
+    mm.insert(make_pair("hamza",20));
+    mm.insert(make_pair("hamza",17));
+    mm.insert(make_pair("hamza",56));
+    mm.insert(make_pair("jisan",21));
+    mm.insert(make_pair("emon",34));
+
+    for(auto s : mm){
+
+        cout<<s.first<<" "<<s.second<<endl;
+    }
+
+    return 0;
+}

@@ -100,6 +100,7 @@ void solve(){
         }
         return;
     }
+    
     a1=y1-y2;
     b1=-x1+x2;
     c1=x1*(y1-y2) - y1*(x1-x2);
@@ -110,6 +111,13 @@ void solve(){
 
     double x=(c1*b2-c2*b1)/(a1*b2-a2*b1);///Cramer’s Rule
     double y=(a1*c2-a2*c1)/(a1*b2-a2*b1);
+
+    //using vector intersecting formula
+
+    // array<int,2>v3={x3-x1, y3-y1};
+    // double t=cross(v3,v2)/cross(v1,v2);
+    // double x=x1+ t*v1[0];
+    // double y=y1+ t*v1[1];
 
 
     cout<<"POINT "<<sp(x,2)<<" "<<sp(y,2)<<"\n";
